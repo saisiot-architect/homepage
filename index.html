@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+	box-sizing: border-box;
+	font-family: "굴림", "돋움", "맑은 고딕", "바탕";
+}
+body {
+	font-family: "굴림", "돋움", "맑은 고딕", "바탕";
+	margin:0
+}
+.mySlides {
+	display: none;
+	font-family: "굴림", "돋움", "맑은 고딕", "바탕";
+}
+img {
+	vertical-align: middle;
+	font-family: "굴림", "돋움", "맑은 고딕", "바탕";
+}
+
+/* Slideshow container */
+.slideshow-container {
+	max-width: 930px;
+	position: relative;
+	margin-left: 0px;
+	margin-top: 10px;
+	font-family: "굴림", "돋움", "맑은 고딕", "바탕";
+}
+
+/* Next & previous buttons */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 100%;
+	width: auto;
+	padding: 10px;
+	margin-top: 0px;
+	color: black;
+	font-weight: bold;
+	font-size: 0px;
+	transition: 0.6s ease;
+	border-radius: 0 0px 0px 0;
+	user-select: none;
+	font-family: "굴림", "돋움", "맑은 고딕", "바탕";
+}
+
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	border-radius: 0px 0 0 0px;
+	font-family: "굴림", "돋움", "맑은 고딕", "바탕";
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8);
+	font-family: "굴림", "돋움", "맑은 고딕", "바탕";
+}
+
+/* Caption text */
+.text {
+	color: #f2f2f2;
+	font-size: 15px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	text-align: center;
+	font-family: "굴림", "돋움", "맑은 고딕", "바탕";
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+	font-family: "굴림", "돋움", "맑은 고딕", "바탕";
+}
+
+/* The dots/bullets/indicators */
+.dot {
+	cursor: pointer;
+	height: 10px;
+	width: 10px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+	font-family: "굴림", "돋움", "맑은 고딕", "바탕";
+}
+
+.active, .dot:hover {
+	background-color: #717171;
+	font-family: "굴림", "돋움", "맑은 고딕", "바탕";
+}
+
+/* Fading animation */
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 2.5s;
+	animation-name: fade;
+	animation-duration: 2.5s;
+	font-family: "굴림", "돋움", "맑은 고딕", "바탕";
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .1} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .1} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+<title>saisiot</title>
+<link href="saisiot_layout.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="wrap">
+  <div id="page_header">
+    <div id="logo"><img src="image/logo5.jpg" width="145" height="35" alt="logo"></div>
+    <div id="nav">
+      <ul>
+        <li><a href="main.html">home</a></li>
+        <li><a href="news.html">news</a></li>
+        <li><a href="works.html">works</a></li>
+        <li><a href="others.html">others</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="contact.html">contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="page_center_main">
+    <div id="logo1"><img src="image/logo6.jpg" width="145" height="17" alt="logo1"></div>
+    
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="slide/1.jpg" style="width:100%">
+        <div class="text"></div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="slide/2.jpg" style="width:100%">
+        <div class="text"></div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="slide/3.jpg" style="width:100%">
+        <div class="text"></div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="slide/4.jpg" style="width:100%">
+        <div class="text"></div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="slide/5.jpg" style="width:100%">
+        <div class="text"></div>
+      </div>
+    
+    </div>
+    <script>
+				var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+  }
+  slides[slideIndex-1].style.display = "block";  
+  setTimeout(showSlides, 4000); 
+}
+	  	</script>
+  </div>
+  <div id="page_footer">
+    <div id="copyright">Copyright(c) 2019, All rights reserved by SAISIOT ARCHITECTS</div>
+    <div id="pictogram1"><a href="https://www.instagram.com/saisiot.kr/"target="_blank"><img src="image/instagram_icon.jpg" width="25" height="25" alt="instragram_icon"></a></div>
+    <div id="pictogram2"><a href="mailto:darchmino@gmail.com"target="_blank"><img src="image/email_icon4.jpg" width="25" height="25" alt="email_icon"></a></a></div>
+  </div>
+</div>
+</body>
+</html>
