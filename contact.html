@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+* {
+	box-sizing: border-box;
+	font-family: "굴림", "돋움", "맑은 고딕", "바탕";
+}
+body {
+	font-family: "굴림", "돋움", "맑은 고딕", "바탕";
+	margin:0
+}
+
+</style>
+	
+<title>contact</title>
+<link href="saisiot_layout.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="wrap">
+  <div id="page_header">
+    <div id="logo"><img src="image/logo5.jpg" width="145" height="35" alt="logo"></div>
+    <div id="nav">
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="news.html">news</a></li>
+        <li><a href="works.html">works</a></li>
+        <li><a href="others.html">others</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="contact.html">contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="page_center_main">
+    <div id="logo1"><img src="image/logo6.jpg" width="145" height="17" alt="logo1"></div>
+    <div id="contact_left"> Phone
+      <p>fax</p>
+      <p>e-mail</p>
+      <p>Address</p>
+    </div>
+    <div id="contact_right"> : 02.3474.2157
+      <p>: 02.3474.2159
+      <p>: darchmino@gmail.com</p>
+      <p>: 서울특별시 강남구 양재천로 183 (도곡동, 지금빌딩) 3층</p>
+      <p>: 3F, 183, Yangjaecheon-ro, Gangnam-gu, Seoul, Republic of Korea  
+    </div>
+  </div>
+  <div id="map">
+	<script>
+
+      // This example adds a marker to indicate the position of Bondi Beach in Sydney,
+      // Australia.
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: {lat: 37.482353, lng: 127.045902}
+        });
+
+        var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+        var beachMarker = new google.maps.Marker({
+          position: {lat: 37.482353, lng: 127.045902},
+          map: map,
+          icon: image
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDT7sSTMO5sgyqu_1l0KuaIK_QAyv0U44c&callback=initMap">
+    </script>
+	</div>
+</div>
+</body>
+</html>
